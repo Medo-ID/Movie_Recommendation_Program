@@ -19,3 +19,18 @@
                     ELSE:
                         -> "movie not found" 
 """
+
+def main():
+    print("""
+        **************************************
+        **************************************
+        *                                    *
+        *  Find a Movie to Watch this Night  *
+        *                                    *
+        **************************************
+        **************************************
+    """)
+
+    print("What type of movies you'd like to watch? \n")
+    user_input = input("Enter the biginning of the genre to see if we have some recommendation: ")
+    
