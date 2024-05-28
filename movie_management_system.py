@@ -3,7 +3,7 @@ Movie Management System
 
 This module defines the data structures and methods for managing a collection of movies 
 categorized by genre. It provides functionalities to insert movies, retrieve movies by 
-genre, and search for movies within a specific release year range. 
+genre, and search for movies within a specific release year range.
 """
 class MovieNode:
     def __init__(self, title, release_year, rating, next_movie_node=None):
