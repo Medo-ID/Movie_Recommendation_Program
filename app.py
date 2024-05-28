@@ -19,6 +19,24 @@
                     ELSE:
                         -> "movie not found" 
 """
+import csv
+from movie_management_system import MovieCollection
+
+movie_collection = MovieCollection()
+
+with open('movies_dataset.csv') as movies_data:
+    reader = csv.DictReader(movies_data)
+    for row in reader:
+        genre = row["Genre"]
+        title = row["Title"]
+        release_year = row["Release_Year"]
+        rating = row["Rating"]
+        movie_collection.insert_movie(genre, title, release_year, rating)
+
+movie_dict = movie_collection.get_movies_table()
+
+def search_for_genre_by_letters(keys, letters):
+    pass
 
 def main():
     print("""
