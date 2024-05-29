@@ -69,3 +69,9 @@ class MovieCollection:
             return self.genre_table[genre].get_data()
         else:
             return "No movies found in this genre."
+    
+    def search_movies_by_year_range(self, start_year, end_year):
+        matching_movies = []
+        for movie_list in self.genre_table.items():
+            matching_movies.extend(movie_list.get_data_by_release_year(start_year, end_year))
+        return matching_movies
